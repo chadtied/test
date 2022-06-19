@@ -15,7 +15,7 @@ int main()
         scanf("%d", &round);
         initialize(arr, &my_row, &my_col, &amy_row, &amy_col, &limit, &my_point, &amy_point, &input);
 
-        for(int dimension= 9; dimension> 4; dimension-= 2){
+        for(int dimension= 10; dimension> 4; dimension-= 2){
                 int dimension_decide= 1;
                 max= -100, max1= -100;
                 max_arr[0]= recursive(arr, my_row- 1, my_col, my_point, 1, limit, input, my_point, dimension, &B_step, &mid_length);
