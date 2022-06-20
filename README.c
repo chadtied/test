@@ -91,7 +91,7 @@ int main()
                         filt[0]= filt_cmp;
                 }
         }
-        if(check_flag== 0|| my_point+ filt[0]> amy_point+ 5){
+        if(check_flag== 0|| my_point+ filt[0]> amy_point+ 3){
                         arr[my_row][my_col]= 'x';
                         if(max_way== 0){
                                 if(!(detect(arr, my_row- 1, my_col, limit, &my_step, input))&& (B_step< my_step* 2- 1&& ((1001-round)>B_step)))
