@@ -40,12 +40,10 @@ int main()
                 }
                 for(int i= 0; i< 4; i++){
                         if(max_arr[i]> max){
+                                max1= max;
+                                max1_way= max_way;
                                 max= max_arr[i];
                                 max_way= i;
-                        }
-                        else if(max_arr[i]> max1){
-                                max1= max_arr[i];
-                                max1_way= i;
                         }
                         else if(max_arr[i]== max)
                                 dimension_decide= 0;
@@ -91,6 +89,7 @@ int main()
                         filt[0]= filt_cmp;
                 }
         }
+
         if(check_flag== 0|| my_point+ filt[0]> amy_point+ 3){
                         arr[my_row][my_col]= 'x';
                         if(max_way== 0){
