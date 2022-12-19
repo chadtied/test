@@ -20,32 +20,37 @@ char alpha;
 while(cin>> alpha>>  mode>> input){
     if(mode== 0){
         int limit= (int)alpha- 96;
-        if(input>= limit)
+        if(input>= limit|| input< 0)
             return 0;
         cout<< azmap[alpha][input]<< " ";
      } 
     else if(mode== 1){
          int len= azmap[alpha].size()- 1;
-         if(input> len)
+         if(input> len|| input< 0)
             return 0;
             
          cout<< azmap[alpha][len- input]<< " ";
      }
-    else if(mode== 2){
-        int count= -1;
-        input-= 1;
+   else if(mode== 2){
+        vector<int> arr;
         for(int i= 0; i< azmap[alpha].size(); i++){
-         if(i%2== 0){
-             count++;
-         }
-         if(count== input){
-             cout<< azmap[alpha][i]<< " ";
-             break;
-         }
-         if(i== azmap[alpha].size()- 1)
-            return 0;
+            if(i%2== 0){
+                arr.push_back(azmap[alpha][i]);
+            }
+        }
+        if(input- 1>=  arr.size()|| input< 1)
+                return 0;
+
+        for(int i= 0; i< arr.size(); i++){
+      
+            if(i== input- 1){
+                cout<< arr[i]<< " ";
+                break;
+            }
         }
     }
+    else
+        return 0;
 }
 return 0;
 }
